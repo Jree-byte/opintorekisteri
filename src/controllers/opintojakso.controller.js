@@ -8,7 +8,7 @@ exports.create = async (req, res) => {
   const opintojakso = new Opintojakso({
     nimi: req.body.nimi,
     laajuus_op: req.body.laajuus_op,
-    koodi: req.body.koodi,
+    kuvaus: req.body.kuvaus,
   });
 
   try {
@@ -37,7 +37,7 @@ exports.findOne = async (req, res) => {
       res.send(data);
     }
   } catch (err) {
-    res.status(500).send({ message: "virhe "  });
+    res.status(500).send({ message: "virhe"  });
   }
 };
 

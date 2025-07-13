@@ -3,13 +3,13 @@ const sql = require('../utils/db');
 const Opintojakso = function(opintojakso) {
   this.nimi = opintojakso.nimi;
   this.laajuus_op = opintojakso.laajuus_op;
-  this.koodi = opintojakso.koodi;
+  this.kuvaus = opintojakso.kuvaus;
 };
 
 Opintojakso.create = async (newOpintojakso) => {
   const [result] = await sql.execute(
-    "INSERT INTO Opintojakso (nimi, laajuus_op, koodi) VALUES (?, ?, ?)",
-    [newOpintojakso.nimi, newOpintojakso.laajuus_op, newOpintojakso.koodi]
+    "INSERT INTO Opintojakso (nimi, laajuus_op, kuvaus) VALUES (?, ?, ?)",
+    [newOpintojakso.nimi, newOpintojakso.laajuus_op, newOpintojakso.kuvaus]
   );
   return { opintojakso_id: result.insertId, ...newOpintojakso };
 };
@@ -25,8 +25,8 @@ Opintojakso.getAll = async () => {
 
 Opintojakso.updateById = async (id, opintojakso) => {
   const [result] = await sql.execute(
-    "UPDATE Opintojakso SET nimi = ?, laajuus_op = ?, koodi = ? WHERE opintojakso_id = ?",
-    [opintojakso.nimi, opintojakso.laajuus_op, opintojakso.koodi, id]
+    "UPDATE Opintojakso SET nimi = ?, laajuus_op = ?, kuvaus = ? WHERE opintojakso_id = ?",
+    [opintojakso.nimi, opintojakso.laajuus_op, opintojakso.kuvaus, id]
   );
   if (result.affectedRows === 0) {
     return null; 
