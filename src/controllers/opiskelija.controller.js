@@ -66,7 +66,7 @@ exports.update = async (req, res) => {
     res.send({ message: `Opiskelija ${req.params.id} päivitetty onnistuneesti.`, updated_data: data });
   } catch (err) {
     if (err.message.includes(`Opiskelijaa ID:llä ${req.params.id} ei löytynyt.`)) {
-      res.status(404).send({ message: err.message }); // 404 Not Found
+      res.status(404).send({ message: err.message });
     } else {
       res.status(500).send({ message: "Virhe päivittäessä opiskelijaa ID:llä " + req.params.id + ": " + err.message });
     }
@@ -80,7 +80,7 @@ exports.delete = async (req, res) => {
     res.status(204).send({ message: "Opiskelija poistettu onnistuneesti!" }); // 204 No Content
   } catch (err) {
     if (err.message.includes(`Opiskelijaa ID:llä ${req.params.id} ei löytynyt.`)) {
-      res.status(404).send({ message: err.message }); // 404 Not Found
+      res.status(404).send({ message: err.message }); 
     } else {
       res.status(500).send({ message: "Virhe poistaessa opiskelijaa ID:llä " + req.params.id });
     }
