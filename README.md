@@ -34,4 +34,4 @@ API:n toiminta:
  2. ER-diagrammi
 
 Alla on ER-diagrammi, joka kuvaa tietokannan taulujen välisiä suhteita ja niiden sisältämiä kenttiä.
-![Opintorekisterin ER-diagrammi](images/ER_diagrammi.png)
+![Opintorekisterin ER-diagrammi](images/ER-diagrammi.png)
