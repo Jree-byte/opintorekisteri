@@ -35,3 +35,7 @@ API:n toiminta:
 
 Alla on ER-diagrammi, joka kuvaa tietokannan taulujen välisiä suhteita ja niiden sisältämiä kenttiä.
 ![Opintorekisterin ER-diagrammi](images/ER-diagrammi.png)
+
+
+
+linkki videoon -> https://youtu.be/cjswSs1p9W8
